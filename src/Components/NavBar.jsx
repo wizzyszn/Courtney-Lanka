@@ -5,10 +5,10 @@ import { GoArrowRight } from "react-icons/go";
 export default function NavBar() {
   return (
     <div className=' pt-5 pb-5 border flex justify-around items-center shadow-sm'>
-        <div><img src={logo} alt="logo"   /></div>
+        <div><Link to='/'><img src={logo} alt="logo"   /></Link></div>
         <div className=' flex gap-7 items-center'>
-        <Link>How to start</Link>
-        <Link>Services</Link>
+        <Link to='/get-started'>How to start</Link>
+        <Link to='/our-services'>Services</Link>
         <Link>Technologies</Link>
         <Link>Careers</Link>
         </div>
