@@ -55,7 +55,10 @@ export default function Footer() {
                 }
             </div>
         </div>
-            <p className=' mt-3'>© 2022 courtney</p>
+        <div className=' p-4 border-t border-b border-[#C4C4C4] mt-5'> 
+        <p className=''>© 2022 courtney</p>
+        </div>
+            
             </div>
   )
 }
