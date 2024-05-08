@@ -3,7 +3,7 @@ import header_img from '../Assets/images/Rectangle 34.png'
 import { GoArrowRight } from "react-icons/go";
 
 
-export default function Form() {
+export default function Form({background_Image = header_img}) {
   return (
     <>
       <div className=' p-48 pt-9  h-[74rem]'>
@@ -42,7 +42,7 @@ export default function Form() {
             <div className=' w-fit p-3 bg-gradient-to-tr from-[#FF9900] to-[#F2CB00] rounded-lg flex items-center gap-1 cursor-pointer text-white shadow-md'><span>GET CONSULTATION</span><GoArrowRight /></div>
         </div>
         <div className=' z-0 absolute left-0'>
-            <img src={header_img} alt="header" />
+            <img src={background_Image} alt="header" />
         </div>
         </div>
         </div>

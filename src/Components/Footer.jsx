@@ -7,10 +7,11 @@ import instagram from '../Assets/footer/Instagram.png'
 import facebook from '../Assets/footer/Facebook.png'
 import twitter from '../Assets/footer/Twitter.png'
 import youtube from '../Assets/footer/YouTube.png'
-const logos = [instagram,facebook,twitter,youtube]
+export const logos = [instagram,facebook,twitter,youtube]
 export default function Footer() {
   return (
-    <div className=' p-48 pt-0 pb-10'>
+    <div className=' p-44 pt-0 pb-10 '>
+        <div className='  border-[#C4C4C4] shadow-sm border-t border-b p-4'>
         <div className='flex justify-between'>
         <div className=' flex flex-col gap-5'>
             <div><img src={logo} alt="" /></div>
@@ -55,7 +56,10 @@ export default function Footer() {
                 }
             </div>
         </div>
-        <div className=' p-4 border-t border-b border-[#C4C4C4] mt-5'> 
+ 
+
+        </div>
+               <div className=' p-4  mt-5'> 
         <p className=''>© 2022 courtney</p>
         </div>
             
