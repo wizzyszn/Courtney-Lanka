@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavBar from '../Components/NavBar'
 import HeroImage from '../Components/HeroImage'
 import conference from '../Assets/online-conference 1.png'
@@ -6,11 +6,17 @@ import  support from '../Assets/technical-support 1.png'
 import cube from '../Assets/cube 1.png'
 import Footer from '../Components/Footer'
 import Form from '../Components/Form'
+import { Context } from '../contexts/AppContext'
+import NavBarExtension from '../Components/NavBarExtension'
 
 export default function GetStarted() {
+    const {toggle} = useContext(Context)
   return (
     <>  
         <NavBar />
+        {
+            toggle && (<NavBarExtension />)
+        }
         <HeroImage paragraph='We specialize in helping you build a team of expert developers.' heading='How to Start' />
         <section className=' p-32 flex flex-col gap-16'>
             <div className=' flex flex-col gap-4 w-[30%]'>

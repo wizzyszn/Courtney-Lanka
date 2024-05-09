@@ -6,10 +6,10 @@ import nodeJs from '../Assets/Techmologies/image 4.png'
 const techs = [react_icon,angular,next,nodeJs]
 export default function Technologies() {
   return (
-    <div className='p-48 flex flex-col justify-center items-center gap-5'>
+    <div className='p-48 flex flex-col justify-center items-center gap-5  max-[720px]:p-4'>
         <p>Specialized</p>
         <h3 className=' text-2xl font-semibold'>Technologies</h3>
-        <div className=' flex items-center gap-14'>
+        <div className=' flex items-center gap-14  max-[720px]:gap-6'>
             {
                 techs.map((elem,index)=>{
                     return <div key={index}> <img src={elem} alt="techs" /> </div>

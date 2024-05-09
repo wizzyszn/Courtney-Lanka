@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavBar from '../Components/NavBar'
 import HeroImage from '../Components/HeroImage'
 import Form from '../Components/Form'
 import Footer from '../Components/Footer'
+import { Context } from '../contexts/AppContext'
+import NavBarExtension from '../Components/NavBarExtension'
 
 export default function Careers () {
+    const {toggle} = useContext(Context)
   return (
     <div>
       <NavBar />
+      {
+        toggle && (<NavBarExtension />)
+      }
       <HeroImage
         width=' w-[50%]'
         heading='Careers'

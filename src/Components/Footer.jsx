@@ -10,12 +10,12 @@ import youtube from '../Assets/footer/YouTube.png'
 export const logos = [instagram,facebook,twitter,youtube]
 export default function Footer() {
   return (
-    <div className=' p-44 pt-0 pb-10 '>
+    <div className=' p-44 pt-0 pb-10  max-[720px]:p-0'>
         <div className='  border-[#C4C4C4] shadow-sm border-t border-b p-4'>
-        <div className='flex justify-between'>
-        <div className=' flex flex-col gap-5'>
+        <div className='flex justify-between  max-[720px]:flex-col  max-[720px]:gap-20'>
+        <div className=' flex flex-col gap-5 max-[720px]:gap-9'>
             <div><img src={logo} alt="" /></div>
-            <p className=' w-[50%]'>Expertly trained, battle-tested, elite software developers on demand</p>
+            <p className=' w-[50%] max-[720px]:w-full'>Expertly trained, battle-tested, elite software developers on demand</p>
             <div className=' flex items-center gap-3'><MdOutlinePhoneEnabled /><p>+94 713249222</p></div>
             <div className='flex items-center gap-3'><GoMail /><p>hello@courtney.lk</p></div>
             <div className=' flex items-center gap-3'><IoLocationOutline /> <p>Courtney Lanka (Private) LimitedLevel 35World Trade CenterColombo 01</p></div>
@@ -45,9 +45,9 @@ export default function Footer() {
             <p>You Get</p>
         </div>
         </div>
-        <div className=' flex flex-col gap-3 mt-5'>
+        <div className=' flex flex-col gap-3 mt-20'>
             <p className=' font-semibold'>Follow us</p>
-            <div className=' flex gap-4'>
+            <div className=' flex gap-4 max-[720px]:justify-around'>
                 {
                     logos.map((elem,index) =>{
                         return <div key={index}><img src={elem} alt="logo" /></div>
@@ -59,7 +59,7 @@ export default function Footer() {
  
 
         </div>
-               <div className=' p-4  mt-5'> 
+               <div className=' p-4  mt-5 max-[720px]:m-0'> 
         <p className=''>© 2022 courtney</p>
         </div>
             

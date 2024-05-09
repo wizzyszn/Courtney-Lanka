@@ -22,75 +22,93 @@ import Db from './Assets/Specialized/database 1.png'
 export const payload = [
     {
         name : 'Frontend Engineers',
-        logo : frontend
+        logo : frontend,
+        id : 0
     },
     {
         name : 'Angular Developers',
-        logo : angular
+        logo : angular,
+        id : 1
     },
     {
         name : 'AI and ML Engineers Deep Lerning',
-        logo : chip
+        logo : chip,
+        id : 2
     },
     {
         name : 'Application Security Engineers',
-        logo : security
+        logo : security,
+        id : 3
     },
     {
         name : 'Fullstack Engineers',
-        logo : software
+        logo : software,
+        id : 4
     },
     {
         name : 'DevOps + DevSecOps Engineers',
-        logo : technical
+        logo : technical,
+        id : 5
     },
     {
         name : 'Data Scientist / Data Engineers',
-        logo : dataSci
+        logo : dataSci,
+        id: 6
     },
     {
         name : 'IOS and Android Developers',
-        logo : phone
+        logo : phone,
+        id : 7
     },
     {
         name : 'UI/UX Engineers',
-        logo : uiux
+        logo : uiux,
+        id: 8
     },
     {
         name : 'PHP Developers',
-        logo : php
+        logo : php,
+        id : 9
     },
     {
         name : 'Project Managers',
-        logo : scrum
+        logo : scrum,
+        id : 10
     },
     {
         name : 'Solution Architects',
-        logo : networking
+        logo : networking,
+        id : 11
     },
     {
         name : 'QA Engineers',
-        logo : quality
+        logo : quality,
+        id :12
     },
     {
         name : 'Wordpress CMS Developers',
-        logo :wordpress
+        logo :wordpress,
+        id : 13
     },
     {
         name : 'Business Analyst',
-        logo : analysis
+        logo : analysis,
+        id  :  14
     },
     {
         name : 'Tech Leads / Team Leads',
-        logo : team
+        logo : team,
+        id :15
     },
     {
         name : 'Product Designer',
-        logo : idea
+        logo : idea,
+        id : 16
     },
     {
         name : 'Mobile App Developers',
-        logo : phone2
+        logo : phone2,
+        id : 17
     },
     {
         name : 'Information Scurity Engineers',
@@ -98,10 +116,12 @@ export const payload = [
     },
     {
         name : 'Golang Dev',
-        logo : golang
+        logo : golang,
+        id :18
     },
     {
         name : 'Database admin',
-        logo : Db
+        logo : Db,
+        id : 19
     },
 ]

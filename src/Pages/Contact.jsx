@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavBar from '../Components/NavBar'
 import HeroImage from '../Components/HeroImage'
 import Form from '../Components/Form'
@@ -6,11 +6,18 @@ import bg from '../Assets/images/Rectangle.png'
 import courtney from '../Assets/Logos/logo1.png'
 import hr from '../Assets/images/aeecc22a67dac7987a80ac0724658493.jpg'
 import ceo from '../Assets/images/beb50368-01d4-402b-8d20-c826a48e2b17.webp'
-import Footer, { logos } from '../Components/Footer'
+import Footer  from '../Components/Footer'
+import { Context } from '../contexts/AppContext'
+import NavBarExtension from '../Components/NavBarExtension'
 export default function Contact() {
+    const {toggle} = useContext(Context)
   return (
     <>
     <NavBar/>
+    {
+        toggle && <NavBarExtension />
+    }
+
     <HeroImage heading='Contact' paragraph='We specialize in helping you build a team of expert developers.' />
     <div className=' flex flex-col gap-3 p-32'>
         <h2 className=' text-3xl font-semibold'>Get in touch</h2>
@@ -39,17 +46,6 @@ export default function Contact() {
             <b>+44 532 82820 9292</b>
           </div>
           <div></div>
-    </div>
-    <div className=' p-36 flex gap-4 flex-col'>
-        <h2 className=' text-3xl font-semibold'>Follow us</h2>
-        <div className=' flex gap-9'>
-                {
-                    logos.map((elem,index) =>{
-                        return <div key={index} className=' scale-125'><img src={elem} alt="logo" /></div>
-                    })
-
-                }
-            </div>
     </div>
     <Footer />
     

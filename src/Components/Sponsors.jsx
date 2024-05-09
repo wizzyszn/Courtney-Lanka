@@ -21,9 +21,9 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <div className=' p-48 pt-12 pb-12 flex flex-col gap-4 items-center bg-[#F8F8F8]'>
+    <div className=' p-48 pt-12 pb-12 flex flex-col gap-4 items-center bg-[#F8F8F8]  max-[720px]:p-4'>
         <p>Clients</p>
-        <h3 className=' text-2xl font-semibold'>Amazing clients who trust us</h3>
+        <h3 className=' text-2xl font-semibold max-[720px]:text-center'>Amazing clients who trust us</h3>
         <div className=' flex items-center  overflow-hidden '>
             {
                 sponsors.map((elem,index) =>{

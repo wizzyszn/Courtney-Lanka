@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavBar from '../Components/NavBar'
 import HeroImage from '../Components/HeroImage'
 import logo0 from '../Assets/Technologies/1280px-Go_Logo_Blue 1.png'
@@ -39,12 +39,18 @@ import logo34 from '../Assets/Technologies/Redis-Logo 1.png'
 import logo35 from '../Assets/Technologies/symfony-logo-png-2 1.png'
 import Footer from '../Components/Footer'
 import Form from '../Components/Form'
+import { Context } from '../contexts/AppContext'
+import NavBarExtension from '../Components/NavBarExtension'
 const logos = [logo0,logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30,logo31,logo32,logo33,logo34,logo35]
 
 export default function Technologies() {
+    const {toggle} = useContext(Context)
   return (
     <>
         <NavBar />
+        {
+            toggle && (<NavBarExtension />)
+        }
         <HeroImage heading='Technologies' paragraph='We specialize in helping you build a team of expert developers.' />
         <div className=' p-32 flex flex-col gap-3'>
             <h2 className=' font-semibold text-3xl'>Technologies</h2>

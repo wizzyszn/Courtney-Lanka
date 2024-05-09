@@ -5,11 +5,14 @@ import Services from './Pages/Services';
 import Technologies from './Pages/Technologies';
 import Careers from './Pages/Careers';
 import Contact from './Pages/Contact';
+import AppContext from './contexts/AppContext';
 function App() {
   
   return (
     <div className="App">
+      <AppContext>
       <BrowserRouter>
+      
       <Routes>
         <Route exact path='/' element ={<Home />}/>
         <Route exact path='/get-started' element ={<GetStarted />}/>
@@ -19,6 +22,7 @@ function App() {
         <Route exact path='/contact' element ={<Contact />}/>
       </Routes>
       </BrowserRouter>
+      </AppContext>
     </div>
   );
 }

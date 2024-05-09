@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavBar from '../Components/NavBar'
 import HeroImage from '../Components/HeroImage'
 import logo1 from '../Assets/Services/link 1.png'
@@ -7,10 +7,14 @@ import outsourcing from '../Assets/Services/outsourcing 1.png'
 import shield from '../Assets/Services/shield 1.png'
 import Form from '../Components/Form'
 import Footer from '../Components/Footer'
+import { Context } from '../contexts/AppContext'
+import NavBarExtension from '../Components/NavBarExtension'
 export default function Services() {
+    const {toggle} = useContext(Context)
   return (
     <div>
         <NavBar />
+        {toggle && (<NavBarExtension />)}
         <HeroImage heading='Our Services' paragraph='We specialize in helping you build a team of expert developers.' />
         <section className=' p-32 flex flex-col gap-4 w-[40%]'>
         <h1 className=' text-3xl font-semibold'>Hire Permanent and Remote Developers</h1>
