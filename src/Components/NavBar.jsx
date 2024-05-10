@@ -5,10 +5,15 @@ import { GoArrowRight } from "react-icons/go";
 import { Context } from '../contexts/AppContext';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import {motion} from "framer-motion"
 export default function NavBar() {
   const {toggle,setToggle} = useContext(Context)
   return (
-    <div className=' pt-5 pb-5 border flex justify-around items-center bg-white` shadow-sm max-[720px]:sticky top-0 z-[1000] max-[720px]:justify-between max-[720px]:pl-4 max-[720px]:pr-4 max-[720px]:pb-0 max-[720px]:pt-0 sticky bg-white'>
+    <motion.div
+      initial ={{ y : -10 , opacity : 0}}
+      animate = {{y : 0, opacity : 1}}
+      transition = {{duration : 0.3, ease : "easeIn", type : 'spring', damping : 10}}
+      className=' pt-5 pb-5 border flex justify-around items-center bg-white` shadow-sm max-[720px]:sticky top-0 z-[1000] max-[720px]:justify-between max-[720px]:pl-4 max-[720px]:pr-4 max-[720px]:pb-0 max-[720px]:pt-0 sticky bg-white'>
         <div className=' size-32 flex items-center'>
         <Link to='/'><img src={logo} alt="logo"   /></Link></div>
         <div className=' flex gap-7 items-center max-[720px]:hidden'>
@@ -28,6 +33,6 @@ export default function NavBar() {
           setToggle(true)
          }} />
         }
-    </div>
+    </motion.div>
   )
 }
