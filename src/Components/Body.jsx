@@ -12,6 +12,7 @@ import Specialized from './Specialized'
 import Technologies from './Technologies'
 import Sponsors from './Sponsors'
 import Form from './Form'
+import Reveal from './Reveal'
  const slides = [
         {
           id: 0,
@@ -45,8 +46,8 @@ export default function Body () {
    
   return (
     <div className=' min-h-[40rem]'>
-        <div className=' grid grid-cols-3 gap-8 p-48 pt-0 max-[720px]:hidden'>
-            {slides.map((slide,index)=>{
+        <Reveal className=' grid grid-cols-3 gap-8 p-48 pt-0 max-[720px]:hidden'>
+        {slides.map((slide,index)=>{
                 return  <div className=' flex gap-6 items-start' key={slide.id}>
                 <img src={slide.img} alt="logo" className=' bg-[#FFF856]' />
                 <div className=' flex flex-col gap-2'>
@@ -59,15 +60,16 @@ export default function Body () {
                 
 
             }
-         
-        </div>
+
+        </Reveal>
+
         <div className=' flex gap-6 items-start max-[720px]:flex-col max-[720px]:items-center max-[720px]:justify-center min-[720px]:hidden max-[720px]:flex max-[720px]:h-[25rem] max-[720px]:p-3 max-[720px]:pt-0  max-[720px]:text-center' key={slides[currentSlide].id}>
                 <img src={slides[currentSlide].img} alt="logo" className=' bg-[#FFF856]' />
                 <div className=' flex flex-col gap-2'>
                 <h3 className=' text-2xl font-semibold'>{slides[currentSlide].title}</h3>
                 <p className=' tracking-tight'>{slides[currentSlide].description}</p>
                 </div>
-            </div>
+        </div>
             <div className=' flex gap-3 justify-center items-center p-3  min-[720px]:hidden'>
                 {
                     slides.map((slide, index) =>{
@@ -79,7 +81,7 @@ export default function Body () {
                     
                   
                 </div>
-        <div className='h-[30rem] max-[720px]:h-[80rem] max-[720px]:p-20 bg-gradient-to-tr from-[#FF9900] to-[#F2CB00] flex-col max-[720px]:justify-start  flex justify-center items-center gap-6'>
+        <Reveal className='h-[30rem] w-full max-[720px]:h-[80rem] max-[720px]:p-20 bg-gradient-to-tr from-[#FF9900] to-[#F2CB00] flex-col max-[720px]:justify-start  flex justify-center items-center gap-6'>
         <div className=' w-[20%] max-[720px]:w-full flex flex-col gap-8 items-center text-center'>
             <Link className=' text-white font-semibold'>How to Start</Link>
             <h3 className=' text-3xl font-semibold'>Easy Process</h3>
@@ -104,7 +106,7 @@ export default function Body () {
             </div>
         </div>
 
-        </div>
+        </Reveal>
         <Expertise />
         <Specialized />
         <Technologies />

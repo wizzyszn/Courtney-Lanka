@@ -15,13 +15,14 @@ import logo13 from '../Assets/Sponsors/rareseeds.png'
 import logo14 from '../Assets/Sponsors/simpletire.png'
 import logo15 from '../Assets/Sponsors/stamped.png'
 import logo16 from '../Assets/Sponsors/unique.png'
+import Reveal from './Reveal'
 const sponsors = [
     logo1,logo2,logo3,logo4,logo5,logo6,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16
 ]
 
 export default function Sponsors() {
   return (
-    <div className=' p-48 pt-12 pb-12 flex flex-col gap-4 items-center bg-[#F8F8F8]  max-[720px]:p-4'>
+    <Reveal className=' p-48 pt-12 pb-12 flex flex-col gap-4 items-center bg-[#F8F8F8]  max-[720px]:p-4'>
         <p>Clients</p>
         <h3 className=' text-2xl font-semibold max-[720px]:text-center'>Amazing clients who trust us</h3>
         <div className=' flex items-center  overflow-hidden '>
@@ -31,6 +32,6 @@ export default function Sponsors() {
                 })
             }
         </div>
-    </div>
+    </Reveal>
   )
 }

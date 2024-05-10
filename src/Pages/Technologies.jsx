@@ -41,6 +41,7 @@ import Footer from '../Components/Footer'
 import Form from '../Components/Form'
 import { Context } from '../contexts/AppContext'
 import NavBarExtension from '../Components/NavBarExtension'
+import Reveal from '../Components/Reveal'
 const logos = [logo0,logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30,logo31,logo32,logo33,logo34,logo35]
 
 export default function Technologies() {
@@ -52,11 +53,16 @@ export default function Technologies() {
             toggle && (<NavBarExtension />)
         }
         <HeroImage heading='Technologies' paragraph='We specialize in helping you build a team of expert developers.' />
-        <div className=' p-32 flex flex-col gap-3'>
+        <div className=' p-32 flex flex-col gap-3 max-[720px]:p-4'>
+            <Reveal>
             <h2 className=' font-semibold text-3xl'>Technologies</h2>
-            <p className=' tracking-tight w-[30%]'>Using the right technology for the right problem is our mantra. We are agile about learning new processes and tools to save time and reduce complexity</p>
+            </Reveal>
+           <Reveal>
+             <p className=' tracking-tight w-[30%] max-[720px]:w-full'>Using the right technology for the right problem is our mantra. We are agile about learning new processes and tools to save time and reduce complexity</p>
+        
+           </Reveal>
         </div>
-        <div className=' text-[#9F9F9F] text-sm flex gap-5 items-center p-32 pt-0'>
+        <Reveal className=' text-[#9F9F9F] text-sm flex gap-5 items-center p-32 pt-0 max-[720px]:flex-wrap max-[720px]:p-4 w-fit'>
             <p className=' bg-[#FFF856] p-1 rounded-lg font-semibold text-black'>All</p>
             <p>Frontend</p>
             <p>Backend</p>
@@ -70,14 +76,14 @@ export default function Technologies() {
             <p>CMS</p>
             <p>ECommerce</p>
             <p>Security</p>
-        </div>
-        <div className=' grid grid-cols-6 p-32 gap-9 pt-0'>
+        </Reveal>
+        <Reveal className=' grid grid-cols-6 p-32 gap-9 pt-0 max-[720px]:p-4 max-[720px]:grid-cols-2'>
             {
                 logos.map((elem,index) =>{
                     return <div key={index} className=' flex items-center p-2 border-2 justify-center rounded-xl shadow-md'><img src={elem} alt="logo" /></div>
                 })
             }
-        </div>
+        </Reveal>
         <Form />
         <Footer />
     </>
