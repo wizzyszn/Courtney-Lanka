@@ -7,7 +7,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 import {motion} from "framer-motion"
 export default function NavBar() {
-  const {toggle,setToggle} = useContext(Context)
+  const {toggle,setToggle,setShowModal,showModal} = useContext(Context);
+  console.log("setShowModal", setShowModal)
+  console.log("showModal", showModal)
   return (
     <motion.div
       initial ={{ y : -10 , opacity : 0}}
@@ -23,7 +25,11 @@ export default function NavBar() {
         <NavLink className={({isActive}) => isActive ? 'text-[#FF9900] font-medium transition-all ease-in duration-75' : 'font-medium  text-[#16205F] transition-all ease-in duration-75' }to ='/careers'>Careers</NavLink>
         </div>
         <div className=' flex gap-4 items-center max-[720px]:hidden'>
-        <NavLink className=' p-2 rounded-lg border-2 border-[#16205F] flex items-center gap-2' >Build A Team<GoArrowRight /></NavLink>
+        <div
+        onClick={() =>{
+          setShowModal(!showModal)
+        }} 
+        className=' cursor-pointer p-2 rounded-lg border-2 border-[#16205F] flex items-center gap-2' >Build A Team<GoArrowRight /></div>
         <NavLink to='/contact' className={({isActive}) => isActive ? 'text-[#FF9900] font-medium transition-all ease-in duration-75' : 'font-medium  text-[#16205F] transition-all ease-in duration-75'}>Contact us</NavLink>
         </div>
         {

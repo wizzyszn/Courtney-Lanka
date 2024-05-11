@@ -1,18 +1,23 @@
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
+import ReactDOM from 'react-dom'
 import Home from './Pages/Home';
 import GetStarted from './Pages/GetStarted';
 import Services from './Pages/Services';
 import Technologies from './Pages/Technologies';
 import Careers from './Pages/Careers';
 import Contact from './Pages/Contact';
-import AppContext from './contexts/AppContext';
+import { Context } from './contexts/AppContext';
+import BuildModal from './Components/BuildModal';
+import { useContext } from 'react';
 function App() {
-  
+  const {showModal} = useContext(Context);
+  console.log("ShowModal in APP.js :", showModal)
   return (
     <div className="App">
-      <AppContext>
+        {
+        showModal &&  ReactDOM.createPortal(<BuildModal />, window.document.getElementById('portal'))
+        }
       <BrowserRouter>
-      
       <Routes>
         <Route exact path='/' element ={<Home />}/>
         <Route exact path='/get-started' element ={<GetStarted />}/>
@@ -22,7 +27,6 @@ function App() {
         <Route exact path='/contact' element ={<Contact />}/>
       </Routes>
       </BrowserRouter>
-      </AppContext>
     </div>
   );
 }
