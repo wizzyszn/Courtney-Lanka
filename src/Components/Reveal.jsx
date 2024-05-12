@@ -13,8 +13,6 @@ const ref = useRef(null)
         }
        
     }, [inView])
-    console.log("ref : ", ref)
-    console.log("isInView : ", inView)
   return (
     <motion.div
     className={className}

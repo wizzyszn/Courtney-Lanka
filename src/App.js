@@ -9,9 +9,9 @@ import Contact from './Pages/Contact';
 import { Context } from './contexts/AppContext';
 import BuildModal from './Components/BuildModal';
 import { useContext } from 'react';
+import Tutorial from './Components/Tutorial';
 function App() {
   const {showModal} = useContext(Context);
-  console.log("ShowModal in APP.js :", showModal)
   return (
     <div className="App">
         {
@@ -25,6 +25,7 @@ function App() {
         <Route exact path='/technologies' element ={<Technologies />}/>
         <Route exact path='/careers' element ={<Careers />}/>
         <Route exact path='/contact' element ={<Contact />}/>
+        <Route exact path='/tutorial' element ={<Tutorial />}/>
       </Routes>
       </BrowserRouter>
     </div>
